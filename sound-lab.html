@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EarTrainer+ Sound Lab</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <main>
+    <h1>Sound Lab</h1>
+    <p class="lede">Hear what the theory engine computes. Pick a key, press a button, and read the spelling below.</p>
+
+    <section class="bar">
+      <label>Key <select id="key"></select></label>
+      <label>Scale <select id="scale"></select></label>
+      <label>Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="0.7"></label>
+      <button id="stop" class="quiet">Stop</button>
+    </section>
+
+    <section>
+      <h2>Scale</h2>
+      <div class="row">
+        <button data-scale="ascending">Play up</button>
+        <button data-scale="descending">Play down</button>
+        <button data-scale="both">Up and down</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Intervals from the tonic</h2>
+      <div class="row">
+        <label><input type="radio" name="dir" value="ascending" checked> Ascending</label>
+        <label><input type="radio" name="dir" value="descending"> Descending</label>
+        <label><input type="radio" name="dir" value="harmonic"> Harmonic</label>
+      </div>
+      <div id="intervals" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Chords on the tonic</h2>
+      <div class="row">
+        <label>Inversion
+          <select id="inversion"><option value="0">Root position</option><option value="1">1st</option><option value="2">2nd</option><option value="3">3rd</option></select>
+        </label>
+        <label>Style
+          <select id="style"><option value="block">Block</option><option value="arpeggio">Arpeggio</option></select>
+        </label>
+      </div>
+      <div id="chords" class="grid"></div>
+    </section>
+
+    <p id="readout" aria-live="polite">Press any button to start. The first press unlocks audio in your browser.</p>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
