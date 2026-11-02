@@ -1,0 +1,17 @@
+:root { --bg:#eef1f5; --ink:#1b2433; --muted:#55627a; --line:#c4cddb; --accent:#0f6b6b; --accent-ink:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif; }
+main { max-width:46rem; margin:0 auto; padding:2rem 1.25rem 6rem; }
+h1 { font-size:2rem; margin:0 0 .25rem; letter-spacing:-.02em; }
+h2 { font-size:1.1rem; margin:2rem 0 .75rem; }
+.lede { color:var(--muted); margin:0 0 1.5rem; max-width:60ch; }
+.bar, .row { display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; align-items:center; margin-bottom:.75rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr)); gap:.5rem; }
+label { display:inline-flex; gap:.5rem; align-items:center; color:var(--muted); }
+select, button { font:inherit; }
+select { padding:.35rem .5rem; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
+button { padding:.55rem .9rem; border:1.5px solid var(--accent); border-radius:6px; background:#fff; color:var(--accent); cursor:pointer; }
+button:hover { background:var(--accent); color:var(--accent-ink); }
+button.quiet { border-color:var(--line); color:var(--muted); }
+button:focus-visible, select:focus-visible, input:focus-visible { outline:3px solid #f0a500; outline-offset:2px; }
+#readout { position:fixed; left:0; right:0; bottom:0; margin:0; padding:.9rem 1.25rem; background:var(--ink); color:#fff; font-size:1.05rem; }
